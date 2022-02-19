@@ -8,6 +8,8 @@ namespace taxi
 {
     public class Cab
     {
+        
+
         public Cab(int id, string car, District district)
         {
             Id = id;

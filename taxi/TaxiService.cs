@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace taxi
 {
-    public class TaxiSerivice
+    class TaxiService
     {
-        public TaxiSerivice()
+        public TaxiService()
         {
             CreateDistricts();
             CreateCabs();
@@ -33,6 +33,3 @@ namespace taxi
         }
     }
 }
-    
-
-
