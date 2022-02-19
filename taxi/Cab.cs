@@ -8,14 +8,11 @@ namespace taxi
 {
     public class Cab
     {
-        
-
         public Cab(int id, string car, District district)
         {
             Id = id;
             Car = car;
             CurrentDistrict = district;
-            IsAvailable = true;
         }
         public int Id { get; set; }
         public string Car { get; set; }
@@ -27,15 +24,15 @@ namespace taxi
         public District CurrentDistrict { get; set; }
         public int ArrivalTime { get; set; }
 
-        public void CalculateArrivalTime(District customerDistrict)
+        public void CalculateArrivalTime(District CurrentDisctrict)
         {
             if (IsAvailable)
             {
-                if (customerDistrict.Number == CurrentDistrict.Number)
+                if (CurrentDisctrict.Number == CurrentDistrict.Number)
                     ArrivalTime = 4;
                 else
                 {
-                    var route = Math.Abs(customerDistrict.Distance - CurrentDistrict.Distance);
+                    var route = Math.Abs(CurrentDisctrict.Distance - CurrentDistrict.Distance);
                     ArrivalTime = route * 5;
                 }
                 if (!IsAvailable)
